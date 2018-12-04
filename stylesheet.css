@@ -29,7 +29,7 @@ h1 {
 }
 
 .bg-img-1 {
-  background: url("/media/yosemite-mobile.jpg");
+  background: url("media/yosemite-mobile.jpg");
   height: 100vh;
   width: 100vw;
   /* background-attachment: fixed; */
@@ -39,7 +39,7 @@ h1 {
 }
 
 .bcg-img-2, .bcg-img-3 {
-  background: url("/media/redmountain.jpg");
+  background: url("media/redmountain.jpg");
   min-height: 500px;
   background-position: center;
   background-size: cover;
@@ -51,27 +51,24 @@ h1 {
 }
 
 #mobilevid {
-  width: 100%;
+  width: 100vw;
 }
 
-/* mobile bars  */
-/* .col-sm-4 {
-  border-right: 0;
+#vidtop-content {
+  padding-top: 20px;
+  position: relative;
+  /* top: -40px; */
+  left: 5px;
+  color: black;
+  font-family: applebold;
 }
 
- .col-sm-4:after {
-  content: "";
-  position: absolute;
-  left: 25%;
-  width: 50%;
-  background-color: white;
-  border-right: 0;
-  border-bottom: 1px solid #ddd;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(221, 221, 221);
-  padding: 10px;
-} */
+#vidtop {
+  color: black;
+  font-family: apple;
+}
+
+
 /* ------------------------------------------------------------ */
 /*  website stuff - only when screen is larger than 800 pixels  */
 @media only screen and (min-width: 800px) {
@@ -132,7 +129,7 @@ h1 {
   }
 
 .bcg-img-3{
-  background: url("/media/img3_3.png");
+  background: url("/media/revised4.png");
   min-height: 500px;
   min-width: 400px;
   height: 100vh;
@@ -159,18 +156,4 @@ h1 {
   #mobilevid {
     display: none;
   }
-}
-
-#vidtop-content {
-  padding-top: 20px;
-  position: relative;
-  /* top: -40px; */
-  left: 5px;
-  color: black;
-  font-family: applebold;
-}
-
-#vidtop {
-  color: black;
-  font-family: apple;
 }
