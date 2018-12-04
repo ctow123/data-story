@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'apple';
+  src: url('../SF-Compact/SFCompactDisplay-Thin.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'applebold';
+  src: url('../SF-Compact/SFCompactDisplay-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*            MOBILE - iPhone, iPad is the default view                  */
+/* _____________________________________________________________________ */
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-family: apple;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0px;
+  font-family: applebold;
+}
+
+.bg-img-1 {
+  background: url("/media/yosemite-mobile.jpg");
+  height: 100vh;
+  width: 100vw;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+}
+
+.bcg-img-2, .bcg-img-3 {
+  background: url("/media/redmountain.jpg");
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#myVideo {
+  display: none;
+}
+
+#mobilevid {
+  width: 100%;
+}
+
+/* mobile bars  */
+/* .col-sm-4 {
+  border-right: 0;
+}
+
+ .col-sm-4:after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  background-color: white;
+  border-right: 0;
+  border-bottom: 1px solid #ddd;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(221, 221, 221);
+  padding: 10px;
+} */
+/* ------------------------------------------------------------ */
+/*  website stuff - only when screen is larger than 800 pixels  */
+@media only screen and (min-width: 800px) {
+
+
+  /* Header and Text formatting  */
+  h1 {
+    font-family: apple;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h2{
+    font-family: applebold;
+    font-size: 18px;
+  }
+  .grid-container{
+    display: inline-grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .grid-item{
+    font-family: apple;
+    border-right: 1px solid #ddd;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: rgb(200, 200, 200);
+    height: 200px;
+    text-align: center;
+
+  }
+
+  #last {
+    border: 0px;
+  }
+
+/* formatting for background images and textboxes  */
+  .bcg-img-1 {
+    background: url("/media/img1_2.png");
+    min-height: 500px;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .bcg-img-2 {
+    background: url("/media/redmountain.jpg");
+    min-height: 500px;
+    min-width: 400px;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+.bcg-img-3{
+  background: url("/media/img3_3.png");
+  min-height: 500px;
+  min-width: 400px;
+  height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+  .txt-1, .txt-2, .txt-3 {
+    min-height: 400px;
+    max-height: 430px;
+    background-color: rgb(230, 230, 230);
+    padding-top: 50px;
+  }
+
+
+  /* formatting for the video at the bottom */
+  #myVideo {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #mobilevid {
+    display: none;
+  }
+}
+
+#vidtop-content {
+  padding-top: 20px;
+  position: relative;
+  /* top: -40px; */
+  left: 5px;
+  color: black;
+  font-family: applebold;
+}
+
+#vidtop {
+  color: black;
+  font-family: apple;
+}
