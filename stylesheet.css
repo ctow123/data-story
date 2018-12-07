@@ -1,3 +1,5 @@
+/* full disclosure, I had to google a lot of code to figure this out, so did take snippets from the web
+ However, I still had to figure out had to make it work for me and fix together in a logical manner*/
 @font-face {
   font-family: 'apple';
   src: url('../SF-Compact/SFCompactDisplay-Thin.otf');
@@ -12,8 +14,7 @@
   font-style: normal;
 }
 
-/*            MOBILE - iPhone, iPad is the default view                  */
-/* _____________________________________________________________________ */
+/* general header and text styling regardless of what device you are on  */
 p {
   margin-left: 10px;
   margin-right: 10px;
@@ -22,28 +23,78 @@ p {
   text-align: left;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 0px;
-  font-family: applebold;
-}
-
-.bg-img-1 {
-  background: url("media/yosemite-mobile.jpg");
+a {
   height: 100vh;
   width: 100vw;
-  /* background-attachment: fixed; */
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
 }
 
-.bcg-img-2, .bcg-img-3 {
-  background: url("media/redmountain.jpg");
+h1 {
+  font-family: apple;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+h2 {
+  font-family: applebold;
+  font-size: 18px;
+}
+
+/*            MOBILE view - iPhone, iPad is the default view , this changes the images
+              for mobile view and removes the parallax scrolling effect, as mobile doesn't
+              usually support it. it also changes the grid, by using rows instead
+              of columns and changes the border line to the bottom instead of the right
+                        */
+/* _____________________________________________________________________ */
+.bcg-img-1 {
+  background: url("media/img1_mobile.png");
   min-height: 500px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.bcg-img-2 {
+  background: url("media/img2_dataprocess.png");
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bcg-img-3 {
+  background: url("media/img3.png");
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.grid-container {
+  display: block;
+  width: 100vw;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-item {
+  font-family: apple;
+  border-bottom: 1px solid #ddd;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(190, 190, 190);
+  height: 150px;
+  text-align: center;
+}
+
+#last {
+  border: 0px;
+}
+
+.txt-1, .txt-2, .txt-3, .txt-4 {
+  min-height: 400px;
+  background-color: rgb(220, 220, 220);
+  padding-top: 50px;
 }
 
 #myVideo {
@@ -54,60 +105,35 @@ h1 {
   width: 100vw;
 }
 
-#vidtop-content {
-  padding-top: 20px;
-  position: relative;
-  /* top: -40px; */
-  left: 5px;
-  color: black;
-  font-family: applebold;
-}
-
-#vidtop {
-  color: black;
-  font-family: apple;
-}
-
-
 /* ------------------------------------------------------------ */
-/*  website stuff - only when screen is larger than 800 pixels  */
+/*  full website - this styling only takes effect when screen width is larger than 800 pixels.
+800 pixels because usally most phones are smaller than that. */
 @media only screen and (min-width: 800px) {
 
-
-  /* Header and Text formatting  */
-  h1 {
-    font-family: apple;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  h2{
-    font-family: applebold;
-    font-size: 18px;
-  }
-  .grid-container{
+  /* the textbox grid to show i know how to use the grid */
+  .grid-container {
     display: inline-grid;
     width: 100vw;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .grid-item{
+  .grid-item {
     font-family: apple;
     border-right: 1px solid #ddd;
     border-right-width: 2px;
     border-right-style: solid;
-    border-right-color: rgb(200, 200, 200);
+    border-right-color: rgb(190, 190, 190);
     height: 200px;
     text-align: center;
-
   }
 
   #last {
     border: 0px;
   }
 
-/* formatting for background images and textboxes  */
+  /* formatting for background images and textboxes  */
   .bcg-img-1 {
-    background: url("/media/img1_2.png");
+    background: url("media/img1.png");
     min-height: 500px;
     height: 100vh;
     width: 100vw;
@@ -118,7 +144,7 @@ h1 {
   }
 
   .bcg-img-2 {
-    background: url("/media/redmountain.jpg");
+    background: url("media/img2_dataprocess.png");
     min-height: 500px;
     min-width: 400px;
     height: 100vh;
@@ -128,23 +154,22 @@ h1 {
     background-repeat: no-repeat;
   }
 
-.bcg-img-3{
-  background: url("/media/revised4.png");
-  min-height: 500px;
-  min-width: 400px;
-  height: 100vh;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-  .txt-1, .txt-2, .txt-3 {
-    min-height: 400px;
-    max-height: 430px;
-    background-color: rgb(230, 230, 230);
-    padding-top: 50px;
+  .bcg-img-3 {
+    background: url("media/img3.png");
+    min-height: 500px;
+    min-width: 400px;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
+  .txt-1, .txt-2, .txt-3, .txt-4 {
+    min-height: 400px;
+    background-color: rgb(220, 220, 220);
+    padding-top: 50px;
+  }
 
   /* formatting for the video at the bottom */
   #myVideo {
