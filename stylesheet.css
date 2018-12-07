@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'apple';
-  src: url('../SF-Compact/SFCompactDisplay-Thin.otf');
+  src: url('SF-Compact/SFCompactDisplay-Thin.otf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'applebold';
-  src: url('../SF-Compact/SFCompactDisplay-Bold.otf');
+  src: url('SF-Compact/SFCompactDisplay-Bold.otf');
   font-weight: normal;
   font-style: normal;
 }
@@ -168,6 +168,7 @@ h2 {
 
   .txt-1, .txt-2, .txt-3, .txt-4 {
     min-height: 400px;
+    max-height: 420px;
     background-color: rgb(220, 220, 220);
     padding-top: 50px;
   }
